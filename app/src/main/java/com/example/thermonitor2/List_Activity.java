@@ -31,7 +31,7 @@ public class List_Activity extends AppCompatActivity {
                 R.drawable.linux};
         ArrayAdapter adapter= new ArrayAdapter<String>(com.example.thermonitor2.List_Activity.this, android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.OS));
         final ListView theListView= (ListView) findViewById(R.id.theListView);
-        theListView.setAdapter(adapter);
+        //theListView.setAdapter(adapter);
 
         com.example.thermonitor2.List_Activity.CustomAdaptor customAdaptor = new com.example.thermonitor2.List_Activity.CustomAdaptor();
         theListView.setAdapter(customAdaptor);
@@ -40,7 +40,7 @@ public class List_Activity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent intent = new Intent(com.example.thermonitor2.List_Activity.this, com.example.thermonitor2.DeviceDetailActivity.class);
-                intent.putExtra("OSversion", theListView.getItemAtPosition(position).toString());
+
                 startActivity(intent);
 
 
